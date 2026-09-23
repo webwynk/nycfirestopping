@@ -174,30 +174,6 @@ a {
   visibility: hidden;
 }
 
-/* ---- Page Loader ---- */
-.page-loader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  background-color: var(--color-black);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  pointer-events: all;
-}
-
-.page-loader__logo {
-  font-family: var(--font-heading);
-  font-size: var(--text-h3);
-  font-weight: 700;
-  color: var(--color-white);
-  letter-spacing: -0.02em;
-}
-
-.page-loader__logo span {
-  color: var(--color-primary);
-}
-
 /* ---- Selection ---- */
 ::selection {
   background-color: var(--color-primary);

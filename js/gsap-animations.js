@@ -8,9 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // Wait for GSAP to load
   if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') {
     console.warn('GSAP or ScrollTrigger not loaded.');
-    // Show page without animations
-    const loader = document.getElementById('pageLoader');
-    if (loader) loader.style.display = 'none';
     return;
   }
 
@@ -25,41 +22,26 @@ document.addEventListener('DOMContentLoaded', () => {
   // Check reduced motion
   const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   if (prefersReducedMotion) {
-    const loader = document.getElementById('pageLoader');
-    if (loader) loader.style.display = 'none';
     return;
   }
 
   const isMobile = window.innerWidth < 640;
 
   // ==========================================
-  // PAGE LOADER / INTRO SEQUENCE
+  // HERO INTRO SEQUENCE
   // ==========================================
 
-  const introTL = gsap.timeline({ delay: 0.1 });
+  const introTL = gsap.timeline({ delay: 0.05 });
 
   introTL
-    // 1. Loader slides up
-    .to('.page-loader', {
-      yPercent: -100,
-      duration: 0.45,
-      ease: 'power3.inOut',
-      onComplete: () => {
-        const loader = document.getElementById('pageLoader');
-        if (loader) {
-          loader.style.display = 'none';
-          loader.style.pointerEvents = 'none';
-        }
-      }
-    })
-    // 2. Nav slides down
+    // 1. Nav slides down
     .from('.navbar', {
       y: -60,
       opacity: 0,
       duration: 0.4,
       ease: 'power3.out',
       clearProps: 'all',
-    }, '-=0.2')
+    })
     // 3. Hero status pill
     .from('.hero__status-pill', {
       y: 15,
