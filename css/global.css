@@ -1,0 +1,220 @@
+/* ============================================
+   NYC Firestopping — Global Styles
+   Typography, layout utilities, base styles
+   ============================================ */
+
+/* ---- Base ---- */
+body {
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  color: var(--color-black);
+  background-color: var(--color-white);
+  overflow-x: hidden;
+}
+
+/* ---- Typography ---- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+  color: var(--color-black);
+}
+
+h1 { font-size: var(--text-h1); }
+h2 { font-size: var(--text-h2); }
+h3 { font-size: var(--text-h3); font-weight: 600; }
+h4 { font-size: var(--text-h4); font-weight: 600; }
+h5 { font-size: var(--text-h5); font-weight: 600; }
+
+p {
+  line-height: 1.7;
+  color: var(--color-gray-600);
+  max-width: 65ch;
+}
+
+p + p {
+  margin-top: var(--space-4);
+}
+
+strong {
+  font-weight: 600;
+}
+
+/* ---- Links ---- */
+a {
+  transition: color var(--transition-fast);
+}
+
+/* ---- Layout ---- */
+.container {
+  width: 100%;
+  max-width: var(--max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--page-padding);
+  padding-right: var(--page-padding);
+}
+
+.section {
+  padding-top: var(--space-16);
+  padding-bottom: var(--space-16);
+}
+
+/* ---- Section Header ---- */
+.section-header {
+  margin-bottom: var(--space-12);
+}
+
+.section-header--center {
+  text-align: center;
+}
+
+.section-header--center p {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.overline {
+  font-family: var(--font-body);
+  font-size: var(--text-overline);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--color-primary);
+  margin-bottom: var(--space-3);
+  display: block;
+}
+
+.section-header h2 {
+  margin-bottom: var(--space-4);
+}
+
+.section-header p {
+  font-size: var(--text-body-lg);
+  color: var(--color-gray-600);
+}
+
+/* ---- Background Variants ---- */
+.bg-white {
+  background-color: var(--color-white);
+}
+
+.bg-off-white {
+  background-color: var(--color-off-white);
+}
+
+.bg-dark {
+  background-color: var(--color-black);
+  color: var(--color-white);
+}
+
+.bg-dark h2,
+.bg-dark h3,
+.bg-dark h4,
+.bg-dark h5 {
+  color: var(--color-white);
+}
+
+.bg-dark p {
+  color: var(--color-gray-400);
+}
+
+.bg-primary {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.bg-primary h2,
+.bg-primary p {
+  color: var(--color-white);
+}
+
+.bg-primary p {
+  opacity: 0.9;
+}
+
+/* ---- Grid Utilities ---- */
+.grid {
+  display: grid;
+  gap: var(--space-8);
+}
+
+.grid-2 {
+  grid-template-columns: 1fr;
+}
+
+.grid-3 {
+  grid-template-columns: 1fr;
+}
+
+.grid-4 {
+  grid-template-columns: 1fr 1fr;
+}
+
+/* ---- Flex Utilities ---- */
+.flex {
+  display: flex;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* ---- Visibility ---- */
+.gsap-hidden {
+  visibility: hidden;
+}
+
+/* ---- Page Loader ---- */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background-color: var(--color-black);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: all;
+}
+
+.page-loader__logo {
+  font-family: var(--font-heading);
+  font-size: var(--text-h3);
+  font-weight: 700;
+  color: var(--color-white);
+  letter-spacing: -0.02em;
+}
+
+.page-loader__logo span {
+  color: var(--color-primary);
+}
+
+/* ---- Selection ---- */
+::selection {
+  background-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+/* ---- Focus Ring ---- */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ---- Reduced Motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

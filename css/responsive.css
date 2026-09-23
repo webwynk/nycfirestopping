@@ -1,0 +1,234 @@
+/* ============================================
+   NYC Firestopping — Responsive Styles
+   Mobile-first: base = mobile, scale up
+   ============================================ */
+
+/* ==========================================
+   TABLET (≥ 640px)
+   ========================================== */
+
+@media (min-width: 640px) {
+
+  /* Layout */
+  .section {
+    padding-top: var(--space-16);
+    padding-bottom: var(--space-16);
+  }
+
+  /* Stats */
+  .stats__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* About highlights */
+  .about__highlights {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+  }
+
+  .about__highlight-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 18px 14px;
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Features */
+  .features__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Industries */
+  .industries__scroll .industry-card {
+    flex: 0 0 220px;
+  }
+
+  /* Projects */
+  .projects__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Contact form row */
+  .contact__form-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer__bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+
+/* ==========================================
+   DESKTOP (≥ 1024px)
+   ========================================== */
+
+@media (min-width: 1024px) {
+
+  /* Nav */
+  .navbar {
+    height: var(--nav-height);
+  }
+
+  .navbar__links {
+    display: flex;
+  }
+
+  .navbar__cta {
+    display: inline-flex;
+  }
+
+  .navbar__hamburger {
+    display: none;
+  }
+
+  /* Section */
+  .section {
+    padding-top: var(--space-20);
+    padding-bottom: var(--space-20);
+  }
+
+  /* Hero */
+  .hero {
+    padding-top: calc(var(--nav-height) + var(--space-12));
+  }
+
+  .hero__grid {
+    grid-template-columns: 55% 45%;
+    gap: var(--space-12);
+  }
+
+  .hero__content {
+    order: 1;
+  }
+
+  .hero__visual {
+    order: 2;
+  }
+
+  .hero__image-wrapper {
+    aspect-ratio: auto;
+    height: 520px;
+  }
+
+  /* About */
+  .about__grid {
+    grid-template-columns: 46% 1fr;
+    gap: var(--space-12);
+    align-items: stretch;
+  }
+
+  .about__image-wrapper {
+    aspect-ratio: auto;
+    height: 100%;
+    min-height: 100%;
+  }
+
+  /* Services */
+  .services__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Features */
+  .features__grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Industries: full grid */
+  .industries__scroll {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: visible;
+  }
+
+  .industries__scroll .industry-card {
+    flex: none;
+  }
+
+  /* Projects */
+  .projects__grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+  }
+
+  /* Process: horizontal */
+  .process__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-6);
+  }
+
+  .process__mobile-line {
+    display: none;
+  }
+
+  .process__line {
+    display: block;
+    position: absolute;
+    top: 28px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background-color: var(--color-gray-200);
+    z-index: 0;
+  }
+
+  .process-step--mobile {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+
+  .process-step--mobile .process-step__marker {
+    margin: 0 auto var(--space-6);
+    width: 56px;
+    height: 56px;
+  }
+
+  .process-step--mobile .process-step__marker-number {
+    font-size: var(--text-body);
+  }
+
+  /* Contact */
+  .contact__grid {
+    grid-template-columns: 40% 1fr;
+    gap: var(--space-16);
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: 1.5fr 1fr 1fr 1fr;
+  }
+}
+
+/* ==========================================
+   WIDE DESKTOP (≥ 1240px)
+   ========================================== */
+
+@media (min-width: 1240px) {
+
+  /* Industries: balanced 3x2 grid */
+  .industries__scroll {
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Projects: 3 columns for more than 4 */
+  .projects__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero__image-wrapper {
+    height: 560px;
+  }
+}
