@@ -105,13 +105,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
   gsap.utils.toArray('.gsap-reveal').forEach((el) => {
     gsap.from(el, {
-      y: 40,
+      y: 24,
       opacity: 0,
-      duration: 0.8,
+      duration: 0.6,
       ease: 'power3.out',
+      clearProps: 'all',
       scrollTrigger: {
         trigger: el,
-        start: 'top 85%',
+        start: 'top 88%',
         toggleActions: 'play none none none',
       },
     });
@@ -126,14 +127,15 @@ document.addEventListener('DOMContentLoaded', () => {
     if (children.length === 0) return;
 
     gsap.from(children, {
-      y: 50,
+      y: 20,
       opacity: 0,
-      duration: 0.6,
-      stagger: 0.1,
+      duration: 0.5,
+      stagger: 0.08,
       ease: 'power3.out',
+      clearProps: 'all',
       scrollTrigger: {
         trigger: parent,
-        start: 'top 80%',
+        start: 'top 85%',
         toggleActions: 'play none none none',
       },
     });

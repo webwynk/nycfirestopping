@@ -360,8 +360,9 @@
 .about__highlights {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-3);
-  margin-bottom: var(--space-8);
+  gap: var(--space-4);
+  margin-bottom: 32px;
+  width: 100%;
 }
 
 .about__highlight-card {
@@ -369,9 +370,9 @@
   flex-direction: row;
   align-items: center;
   gap: 14px;
-  padding: 14px 16px;
+  padding: 16px 18px;
   background-color: var(--color-off-white);
-  border: 1px solid rgba(0, 0, 0, 0.07);
+  border: 1px solid rgba(0, 0, 0, 0.08);
   border-radius: var(--radius-lg);
   transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base), background-color var(--transition-base);
   box-sizing: border-box;
@@ -410,7 +411,7 @@
 .about__highlight-content {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 3px;
 }
 
 .about__highlight-title {
@@ -432,17 +433,21 @@
 .about__action {
   display: flex;
   align-items: center;
+  margin-top: 32px;
+  position: relative;
+  z-index: 2;
+  width: 100%;
 }
 
 .about__action .btn-secondary {
   height: 48px;
-  padding: 0 26px;
+  padding: 0 28px;
   border: 2px solid var(--color-black);
   border-radius: var(--radius-md);
   font-weight: 600;
   font-size: 15px;
   color: var(--color-black);
-  background: transparent;
+  background-color: var(--color-white);
   gap: 10px;
   transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
