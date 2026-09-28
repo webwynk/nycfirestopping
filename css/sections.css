@@ -693,6 +693,26 @@
   padding-bottom: var(--space-12);
 }
 
+.footer__logo {
+  display: inline-block;
+  text-decoration: none;
+  transition: opacity var(--transition-fast), transform var(--transition-fast);
+}
+
+.footer__logo:hover {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.footer__logo-img {
+  display: block;
+  height: 60px;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  transition: height var(--transition-fast);
+}
+
 .footer__brand-desc {
   font-size: var(--text-body-sm);
   color: var(--color-gray-400);

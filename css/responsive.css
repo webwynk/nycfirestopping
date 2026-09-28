@@ -15,6 +15,11 @@
     padding-bottom: var(--space-16);
   }
 
+  /* Hero */
+  .hero {
+    padding-top: calc(var(--nav-height) + var(--space-8));
+  }
+
   /* Stats */
   .stats__grid {
     grid-template-columns: repeat(4, 1fr);
@@ -72,6 +77,19 @@
     justify-content: space-between;
     text-align: left;
   }
+
+  /* Nav & Logo */
+  .navbar {
+    height: var(--nav-height);
+  }
+
+  .navbar__logo-img {
+    height: 70px;
+  }
+
+  .footer__logo-img {
+    height: 70px;
+  }
 }
 
 /* ==========================================
@@ -83,6 +101,14 @@
   /* Nav */
   .navbar {
     height: var(--nav-height);
+  }
+
+  .navbar__logo-img {
+    height: 70px;
+  }
+
+  .footer__logo-img {
+    height: 70px;
   }
 
   .navbar__links {

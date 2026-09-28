@@ -54,8 +54,8 @@
   /* ---- Layout ---- */
   --max-width: 1240px;
   --page-padding: 1.5rem;
-  --nav-height: 72px;
-  --nav-height-mobile: 64px;
+  --nav-height: 88px;
+  --nav-height-mobile: 76px;
 
   /* ---- Shadows ---- */
   --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);

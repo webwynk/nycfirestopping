@@ -91,7 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
       const target = document.querySelector(href);
       if (!target) return;
 
-      const navHeight = window.innerWidth >= 1024 ? 72 : 64;
+      const navbarEl = document.getElementById('navbar');
+      const navHeight = navbarEl ? navbarEl.offsetHeight : (window.innerWidth >= 640 ? 88 : 76);
 
       if (lenis) {
         lenis.scrollTo(target, { offset: -navHeight });
