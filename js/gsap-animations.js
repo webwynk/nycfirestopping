@@ -83,14 +83,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ease: 'power3.out',
       clearProps: 'all',
     }, '-=0.2')
-    // 7. Trust badges
-    .from('.hero__badges', {
-      y: 15,
-      opacity: 0,
-      duration: 0.3,
-      ease: 'power3.out',
-      clearProps: 'all',
-    }, '-=0.2')
     // 8. Hero image clip-path reveal
     .from('.hero__image-wrapper', {
       clipPath: 'inset(0 0 0 100%)',

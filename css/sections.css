@@ -242,43 +242,6 @@
   color: var(--color-black);
 }
 
-/* Trust Badges */
-.hero__badges {
-  display: flex;
-  flex-wrap: wrap;
-  gap: var(--space-3);
-  margin-top: 0;
-  padding-top: var(--space-5);
-  border-top: 1px solid var(--color-gray-200);
-  position: relative;
-  z-index: 1;
-}
-
-.hero__badge {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-2);
-  padding: 6px 12px;
-  background-color: var(--color-gray-100);
-  border-radius: var(--radius-sm);
-  font-size: var(--text-caption);
-  font-weight: 600;
-  color: var(--color-gray-800);
-}
-
-.hero__badge-icon {
-  width: 14px;
-  height: 14px;
-  color: var(--color-primary);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero__badge-icon svg {
-  width: 100%;
-  height: 100%;
-}
 
 /* Hero Visual */
 .hero__visual {
